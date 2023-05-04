@@ -1,0 +1,39 @@
+{
+  "id": "4efa063e-7b06-49bb-8be8-7879f9606f55",
+  "name": "EM create subrates from per diem rate",
+  "publisher": "github.com/continia-dach",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "https://github.com/continia-dach/em-create-subrates",
+  "logo": "res/BC-idea-logo.png",
+  "dependencies": [
+    {
+      "id": "8d4eab29-8c7f-4b6c-be9a-b7fdfb9da196",
+      "name": "Continia Expense Management",
+      "publisher": "Continia Software",
+      "version": "8.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "21.0.0.0",
+  "idRanges": [
+    {
+      "from": 62060,
+      "to": 62069
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "10.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
