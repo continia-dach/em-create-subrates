@@ -32,7 +32,12 @@ report 62060 "PTE EM CrSR Wizard"
                         ApplicationArea = All;
                         Caption = 'Start with minimum number of hours';
                     }
-
+                    field(DevideBy; DevideBy)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Meal allowance divisor';
+                        ToolTip = 'Defines the integeger divisor that is used for calculation of hourly rate.';
+                    }
                 }
             }
         }
@@ -63,7 +68,7 @@ report 62060 "PTE EM CrSR Wizard"
                     PerDiemRateDetails."Accommodation Allowance Code" := PerDiemRate."Accommodation Allowance Code";
                     PerDiemRateDetails."Start Date" := PerDiemRate."Start Date";
                     PerDiemRateDetails."Minimum Stay (hours)" := StartWithMinimumStayHours + Subrate;
-                    PerDiemRateDetails."Meal Allowance" := PerDiemRate."Daily Meal Allowance" / SubRateQty * (Subrate + 1);
+                    PerDiemRateDetails."Meal Allowance" := PerDiemRate."Daily Meal Allowance" / DevideBy * (StartWithMinimumStayHours + Subrate + 1);
                     PerDiemRateDetails.Insert(true);
                 end;
             until PerDiemRate.Next() = 0;
@@ -74,5 +79,6 @@ report 62060 "PTE EM CrSR Wizard"
     var
         SubRateQty: Integer;
         StartWithMinimumStayHours: Integer;
+        DevideBy: Integer;
 
 }
